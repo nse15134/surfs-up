@@ -20,10 +20,10 @@ The data above represent June and December.  As we can see the Mean temperature 
 ## Summary
 As we can see from above, June is indeed warmer but not by too much.  It is our recommendation to keep the business open and I believe it will still do well.  The temperature changes are not drastic enough to cause and harm to the business. If we want to drill down into the details, we can run the following snippet of code to get the entire list and view the data at a much more granular level.
 
-### June
+### June Query for More Granular Data
 
 session.query(Measurement.date, Measurement.tobs).filter(extract('month',Measurement.date)==6).all()
 
-### December
+### December Query for more Granular Date
 
 session.query(Measurement.date, Measurement.tobs).filter(extract('month',Measurement.date)==12).all()
